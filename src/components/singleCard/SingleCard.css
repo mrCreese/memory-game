@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 5px solid wheat;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 15px 15px 5px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: 0.4s;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .front {
+    align-items: center;
+    margin: 2px;
+    width: 70%;
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+}
+.fliped .front {
+    transition: all ease-in 0.2s;
+    transition-delay: 0s;
+}
+.card .back {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    transform: rotateY(0deg);
+    transition: all ease-in 0.2s;
+}
+.fliped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0.2s;
+}
